@@ -38,4 +38,4 @@ jobs:
           password: ${{ secrets.REMOTE_PWD }}
           port: 22
           source: 'build/'
-          target: 'www/ci'
+          target: '/www/ci'
