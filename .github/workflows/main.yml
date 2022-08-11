@@ -33,7 +33,7 @@ jobs:
       - name: copy dist file with server
         uses: appleboy/scp-action@v0.0.1
         with:
-          hosts: ${{ secrets.REMOTE_HOST }}
+          host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
           private_key: ${{ secrets.SERVER_SSH_KEY }}
           source: 'dist/'
