@@ -34,7 +34,8 @@ jobs:
         uses: appleboy/scp-action@v0.0.1
         with:
           host: ${{ secrets.REMOTE_HOST }}
-          user: ${{ secrets.REMOTE_USER }}
-          private_key: ${{ secrets.SERVER_SSH_KEY }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PWD }}
+          port: 22
           source: 'dist/'
           target: 'www/ci'
